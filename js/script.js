@@ -44,12 +44,20 @@
   ];
 
   const certificateData = [
-    { id: 'nptel', provider: 'NPTEL', title: '[NPTEL COURSE NAME]', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'lavender' },
-    { id: 'newton-school', provider: 'Newton School', title: '[NEWTON SCHOOL COURSE NAME]', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sage' },
-    { id: 'scaler', provider: 'Scaler', title: '[SCALER COURSE NAME]', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'blue' },
-    { id: 'infosys', provider: 'Infosys Springboard', title: '[INFOSYS SPRINGBOARD COURSE NAME]', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'rose' },
-    { id: 'matlab', provider: 'MATLAB', title: '[MATLAB COURSE/CERTIFICATION NAME]', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sand' },
-    { id: 'cdac', provider: 'CDAC', title: '10-Day Python & Web Development Training', kind: 'Training / Course', note: 'Topics may include Python, Web Development, HTML, CSS, JavaScript and other verified topics.', tone: 'lavender' }
+    { id: 'nptel', provider: 'NPTEL', title: 'Programming in Java', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'lavender' },
+    { id: 'nptel', provider: 'NPTEL', title: 'Design and Analysis of Algorithms', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'lavender' },
+    { id: 'newton-school', provider: 'Newton School', title: 'Web Development', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sage' },
+    { id: 'scaler', provider: 'Scaler', title: 'Operating Systems', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'blue' },
+    { id: 'infosys', provider: 'Infosys Springboard', title: 'DSA with JAVA', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'rose' },
+    { id: 'infosys', provider: 'Infosys Springboard', title: 'Computer Networks', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'rose' },
+    { id: 'matlab', provider: 'MATLAB', title: 'Calculation with Vectors and Matrices', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sand' },
+    { id: 'cdac', provider: 'CDAC', title: '10-Day Python & Web Development Training', kind: 'Training / Course', note: 'Topics may include Python, Web Development, HTML, CSS, JavaScript and other verified topics.', tone: 'lavender' },
+    { id: 'matlab', provider: 'MATLAB', title: 'Regression', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sand' },
+    { id: 'matlab', provider: 'MATLAB', title: 'Fitting of Curve', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sand' },
+    { id: 'matlab', provider: 'MATLAB', title: 'Machine Learning', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sand' },
+    { id: 'newton-school', provider: 'Newton School', title: 'C++', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sage' },
+    { id: 'newton-school', provider: 'Newton School', title: 'Python', kind: 'Certification', note: 'Course name and certificate details to be added once verified.', tone: 'sage' },
+
   ];
 
   const projectModal = $('#project-modal');
@@ -265,7 +273,7 @@
         <p class="modal-description">${project.description}</p>
         <div class="modal-data"><div class="modal-data-block"><span>Technologies</span><p>${project.tech.join(' · ')}</p></div><div class="modal-data-block"><span>Features</span><div class="modal-features">${project.features.map(feature => `<span>${feature}</span>`).join('')}</div></div></div>
         <div class="modal-learning"><span>What I learned</span><p>Project-specific learning notes will be added here when verified.</p></div>
-        <div class="modal-actions"><button class="modal-button" type="button" data-placeholder="GitHub">GitHub placeholder <span>↗</span></button><button class="modal-button" type="button" data-placeholder="Live demo">Live demo placeholder <span>↗</span></button></div>
+        <div class="modal-actions"><button class="modal-button" type="button" data-placeholder="GitHub">GitHub placeholder <span>↗</span></button></div>
       </div>
       <div class="modal-gallery"><div class="gallery-heading"><span>Gallery / ${String(galleryIndex + 1).padStart(2, '0')} of ${String(project.galleryCount).padStart(2, '0')}</span><div class="gallery-controls"><button type="button" data-gallery-prev aria-label="Previous gallery image">←</button><button type="button" data-gallery-next aria-label="Next gallery image">→</button></div></div><div class="gallery-main">${projectArt(project.id, galleryIndex, true)}</div><div class="gallery-thumbs">${gallery.map(index => `<button type="button" class="gallery-thumb${index === galleryIndex ? ' is-active' : ''}" data-gallery-index="${index}" aria-label="Open image ${index + 1}">${projectArt(project.id, index)}</button>`).join('')}</div></div>
     </div>`;
