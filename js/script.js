@@ -171,7 +171,7 @@
 
   function initTyping() {
     const target = $('.typed-role');
-    const roles = ['Computer Engineering Student', 'Java Developer', 'Web Developer', 'Problem Solver', 'Tech Enthusiast'];
+    const roles = ['Computer Engineering Student', 'Software Developer', 'Web Developer', 'Problem Solver', 'Tech Enthusiast', 'Logical Thinker','Curious Mind','Innovative Thinker'];
     let roleIndex = 0, charIndex = 0, deleting = false;
     const tick = () => {
       const role = roles[roleIndex];
